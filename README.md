@@ -1,1 +1,1 @@
-# makay-website
+# MAKAY! Strength Training Program Generator
