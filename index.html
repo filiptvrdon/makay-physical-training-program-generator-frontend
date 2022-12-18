@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Strength training program generator</title>
+  </head>
+  <body>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">
+          Strength training program generator
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4">
+            This tool is our take on the problem of creating a solid training
+            program for people who do not have the ability to create a training
+            program themselves and/or can not afford to pay personalized
+            training program.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="horizontal-divider bg-dark text-secondary"></div>
+
+    <div class="container-fluid bg-dark text-secondary">
+      <div class="container">
+        <form class="makay-strength-training-program-generator">
+          <div class="row">
+            <div class="col">
+              <h2>Basic Information</h2>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First Name"
+                />
+                <label for="firstName">First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last Name"
+                />
+                <label for="firstName">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+                <label for="email">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  placeholder="Age"
+                />
+                <label for="age">Age</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  id="gender"
+                  aria-label="Floating label select example"
+                >
+                  <option value="man">Man</option>
+                  <option value="woman">Woman</option>
+                </select>
+                <label for="gender">Gender</label>
+              </div>
+            </div>
+            <div class="col">
+              <h2>Physical Info</h2>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="weight"
+                  placeholder="Weight"
+                />
+                <label for="weight">Weight</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="height"
+                  placeholder="Height"
+                />
+                <label for="height">Height</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="bodyfat"
+                  placeholder="Bodyfat %"
+                />
+                <label for="bodyfat">Bodyfat %</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  id="activityLevel"
+                  aria-label="Floating label select example"
+                >
+                  <option value="1.2">Sedentary</option>
+                  <option value="1.375">Lightly Active</option>
+                  <option value="1.55">Moderately Active</option>
+                  <option value="1.725">Very Active</option>
+                  <option value="1.9">Extremely Active</option>
+                </select>
+                <label for="activityLevel">Activity level</label>
+              </div>
+              <div class="form-floating">
+                <select
+                  class="form-select"
+                  id="trainingLevel"
+                  aria-label="Floating label select example"
+                >
+                  <option value="newbie">
+                    Newbie (very little/no lifting experience)
+                  </option>
+                  <option value="beginner">
+                    Beginner (has been training for a couple months)
+                  </option>
+                  <option value="semiIntermediate">
+                    Semi-Intermediate (squat 1 * bodyweight, deadlift 1.5 *
+                    bodyweight, benchpress 0.75 * bodyweight)
+                  </option>
+                  <option value="intermediate">
+                    Intermediate (squat 1.5 * bodyweight, deadlift 2 *
+                    bodyweight, benchpress 1 * bodyweight)
+                  </option>
+                  <option value="advanced">
+                    Advanced (squat 2 * bodyweight, deadlift 2.5 * bodyweight,
+                    benchpress 1.25 bodyweight
+                  </option>
+                </select>
+                <label for="trainingLevel">Training level</label>
+              </div>
+            </div>
+            <div class="col">
+              <h2>Strength Standards</h2>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maxSquat"
+                  placeholder="Max Squat"
+                />
+                <label for="maxSquat">Max Squat</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maxDeadlift"
+                  placeholder="Max Deadlift"
+                />
+                <label for="maxDeadlift">Max Deadlift</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maxBenchPress"
+                  placeholder="MAX BENCH PRES"
+                />
+                <label for="maxBenchPress">Max Bench Press</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maxOHP"
+                  placeholder="Max Overhead Press"
+                />
+                <label for="maxOHP">Max Overhead Press</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maxPullups"
+                  placeholder="Max Bodyweigth Pullups"
+                />
+                <label for="maxPullups">Max Bodyweigth Pullups</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="horizontal-divider bg-dark text-secondary"></div>
+    <div
+      class="d-grid gap-2 d-sm-flex justify-content-sm-center bg-dark text-secondary"
+    >
+      <button
+        type="button"
+        id="trainigDataFormSubmitButton"
+        class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold"
+        data-bs-toggle="modal"
+        data-bs-target="#strengthTrainingProgramGeneratorModal"
+      >
+        Submit
+      </button>
+    </div>
+
+    <div class="horizontal-divider bg-dark text-secondary"></div>
+
+    <div
+      class="modal fade centered makay-strength-training-program-generator-modal"
+      id="strengthTrainingProgramGeneratorModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
